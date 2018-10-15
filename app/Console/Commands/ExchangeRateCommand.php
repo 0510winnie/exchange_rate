@@ -15,7 +15,7 @@ class ExchangeRateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'query:exchange_rate';
+    protected $signature = 'query:exchange_rate {currency}';
 
     /**
      * The console command description.

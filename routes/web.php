@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Services\ExchangeRateService;
+use App\Mail\ExchangeRateMail;
 
 Route::get('/', function () {
-    return view('welcome');
+    \Mail::to('0510winnie@gmail.com')->send(new ExchangeRateMail(100));
 });

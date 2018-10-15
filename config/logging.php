@@ -35,7 +35,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['single', 'slack'],
         ],
 
         'single' => [
@@ -53,10 +53,10 @@ return [
 
         'slack' => [
             'driver' => 'slack',
-            'url' => env('LOG_SLACK_WEBHOOK_URL'),
+            'url' => 'https://hooks.slack.com/services/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',
             'username' => 'Laravel Log',
             'emoji' => ':boom:',
-            'level' => 'critical',
+            'level' => 'error',
         ],
 
         'stderr' => [
